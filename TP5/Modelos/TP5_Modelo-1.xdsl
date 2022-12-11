@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in trial version of GeNIe, which can be used for evaluation purposes only -->
+<smile version="1.0" id="Network3" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="TipoPlanta">
+			<state id="Arroz" />
+			<state id="Maiz" />
+			<probabilities>0.4977341389728097 0.5022658610271903</probabilities>
+		</cpt>
+		<cpt id="HojaRota1">
+			<state id="Si" />
+			<state id="No" />
+			<parents>TipoPlanta</parents>
+			<probabilities>0.5439393939393939 0.4560606060606061 0.490990990990991 0.509009009009009</probabilities>
+		</cpt>
+		<cpt id="ColorHoja">
+			<state id="Amarronada" />
+			<state id="Rojiza" />
+			<state id="Amarilla" />
+			<state id="Verde" />
+			<parents>TipoPlanta</parents>
+			<probabilities>0.2643939393939394 0.231060606060606 0.2431818181818182 0.2613636363636364 0.292042042042042 0.274024024024024 0.1869369369369369 0.246996996996997</probabilities>
+		</cpt>
+		<cpt id="FormaLesion">
+			<state id="Ovalado" />
+			<state id="Circular" />
+			<state id="Longitudinal" />
+			<parents>TipoPlanta</parents>
+			<probabilities>0.307070707070707 0.3525252525252525 0.3404040404040404 0.3403403403403403 0.2892892892892893 0.3703703703703703</probabilities>
+		</cpt>
+		<cpt id="Estacion">
+			<state id="Primavera" />
+			<state id="Verano" />
+			<state id="Invierno" />
+			<state id="Otonio" />
+			<parents>FormaLesion</parents>
+			<probabilities>0.2709302325581395 0.2104651162790698 0.2476744186046512 0.2709302325581395 0.2734741784037559 0.2265258215962441 0.2030516431924883 0.2969483568075117 0.2044491525423729 0.2468220338983051 0.3019067796610169 0.2468220338983051</probabilities>
+		</cpt>
+		<cpt id="mm">
+			<state id="" />
+			<state id="" />
+			<state id="" />
+			<state id="" />
+			<intervals>0 100 200 300 400</intervals>
+			<parents>Estacion TipoPlanta</parents>
+			<probabilities>0.3273325524551884 0.1311396979358177 0.3121280819564919 0.2293996676525022 0.1100441192532128 0.5834719692425948 0.1390726538122998 0.1674112576918926 0.09493887089798704 0.103545902939509 0.3327531571608707 0.4687620690016332 0.3562106625360056 0.1728405714861702 0.1057417537185516 0.3652070122592725 0.6103209207164526 0.1543723173842583 0.06730864131296779 0.1679981205863213 0.5399320651482349 0.1379323246847477 0.08197462352641989 0.2401609866405977 0.1914921559727576 0.1039246190466363 0.5215794864115492 0.183003738569057 0.1260506933908087 0.1473477268142953 0.3132822515825814 0.4133193282123146</probabilities>
+		</cpt>
+		<cpt id="Enferma">
+			<state id="Enferma" />
+			<state id="NoEnferma" />
+			<parents>ColorHoja mm HojaRota1</parents>
+			<probabilities>0.4644018810315829 0.5355981189684171 0.6361532684397825 0.3638467315602175 0.450147401717047 0.5498525982829529 0.1906360478289852 0.8093639521710148 0.7796728580191502 0.2203271419808497 0.6486078546009185 0.3513921453990815 0.5222337038205455 0.4777662961794545 0.8033692150394212 0.1966307849605788 0.1146476242176521 0.8853523757823478 0.6314936044995194 0.3685063955004805 0.3444225998633541 0.6555774001366459 0.5348871029131738 0.4651128970868263 0.8274536174537794 0.1725463825462207 0.4728639659569001 0.5271360340430998 0.7118876289898728 0.2881123710101272 0.4305123214704921 0.5694876785295079 0.6220430341636444 0.3779569658363557 0.5634498000893392 0.4365501999106609 0.4206201108090695 0.5793798891909305 0.5445350165961736 0.4554649834038264 0.8055213676489629 0.1944786323510372 0.3673110416759974 0.6326889583240026 0.36053807612972 0.63946192387028 0.3418068950751262 0.6581931049248738 0.5475526649672496 0.4524473350327504 0.1065524114448678 0.8934475885551323 0.541464161307695 0.4585358386923049 0.6217438102298602 0.3782561897701397 0.459819172941378 0.5401808270586219 0.6036572725622372 0.3963427274377628 0.3942453867507654 0.6057546132492346 0.8654979732449239 0.134502026755076</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 4.0.2304.2 EVALUATION" name="Network3">
+			<node id="TipoPlanta">
+				<name>TipoPlanta</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>73 17 153 121</position>
+				<barchart active="true" />
+			</node>
+			<node id="HojaRota1">
+				<name>HojaRota1</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>797 42 961 120</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="FormaLesion">
+				<name>FormaLesion</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>291 245 339 275</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="ColorHoja">
+				<name>ColorHoja</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>236 505 284 535</position>
+				<barchart active="true" width="128" height="90" />
+			</node>
+			<node id="Estacion">
+				<name>Estacion</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>515 338 571 373</position>
+				<barchart active="true" width="128" height="90" />
+			</node>
+			<node id="mm">
+				<name>mm</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>694 225 742 255</position>
+				<barchart active="true" width="128" height="90" />
+			</node>
+			<node id="Enferma">
+				<name>Enferma</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1274 453 1322 483</position>
+				<barchart active="true" width="128" height="119" />
+			</node>
+		</genie>
+	</extensions>
+</smile>
